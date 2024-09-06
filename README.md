@@ -1,7 +1,38 @@
-# **UNDER CONSTRUCTION**
-Caution, this is under construction. It means that it has no or not all functionality. (will be added later)
+# ReHome - Home Manager for your Dotfiles (Inspired by NixOS)
 
-If you are interested in the project, you can read PLAN.md file.
+ReHome - is a shell script which can copy ("pull") and paste ("push") your config files/dotfiles from the system.
+
+### How does it work?
+
+ReHome shell script creates a new config file/text file where it can store every configuration file you want or need.
+This might be config files for basic applications like (btop, neofetch, etc...). But also this can be WM's config files.
+Such as (bspwm, sxhkd, polybar, rofi, etc...).
+
+### Status of the tool
+
+To get you know about the project, we will write the current status of the tool right here. Yeah right here :)
+
+**IN DEVELOPMENT (ALPHA-RELEASE)**
+
+# Basic Installation Guide
+
+To install this shell script you will need to install these package:
+**gum**
+Official github repository of gum: https://github.com/charmbracelet/gum
 
 
-Thank you for your attention :)
+P.S: If we will see that using gum is not really needed and the difference between the regular shell script and shell script with the gum interfac
+is not huge for user-friendliness/use-easiness, we will stop using it.
+
+
+Now just run the shell script.
+
+## LICENSES
+
+These shell script is under GPL License, while gum is used under the MIT LICENSE.
+
+To read more about LICENSE information open the LICENSE file.
+
+
+The freedom of this shell script/tool lies in your hands. Use it, modify it, and distribute it as you wish :). This project is licensed under the GPL-3.0.
+
