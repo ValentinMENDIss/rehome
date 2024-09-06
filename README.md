@@ -29,7 +29,16 @@ Now just run the shell script.
 
 ## LICENSES
 
-These shell script is under GPL License, while gum is used under the MIT LICENSE.
+### Project's License
+These project (shell-script) is licensed under the GNU General Public License v 3.0
+(GPL-3.0)
+
+### Third-Party License
+
+This project (shell-script) uses the 'gum' interface for shell scripts (CLI-Tool), which is licensed under the MIT License.
+The 'gum' license text is included in the 'LICENSE.GUM' file.
+
+### Important Information
 
 To read more about LICENSE information open the LICENSE file.
 
