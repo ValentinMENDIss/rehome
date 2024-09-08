@@ -36,6 +36,7 @@ if [ "$OPTION" == "push" ]; then
                 if [[ "$line" =~ ^-----\ Start\ of\ (.*)\ -----$ ]]; then
                         current_file="${BASH_REMATCH[1]}" > "$current_file"
                 elif [[ "$line" =~ ^-----\ End\ of\ (.*)\ -----$ ]]; then
+                        chmod +x $current_file
                         current_file=""
                 elif [[ -n "$current_file" ]]; then
                         echo "$line" >> "$current_file"
