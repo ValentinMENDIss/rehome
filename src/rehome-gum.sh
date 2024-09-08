@@ -8,6 +8,7 @@
 
 ##################
 
+
 # declaration of variables
 CONF_DIRPATH=~/.config/rehome.conf
 DIRPATH=~/.config
@@ -24,16 +25,25 @@ if [ ! -d $CONF_DIRPATH ]; then
 fi
 
 
-
 # main code
-echo '{{ Color "99" "0" " ReHome (Home Declarator) " }}' | gum format -t template
-echo $OPTION
+echo '{{ Color "99" "0" " ReHome (Home Declarator) " }}' | gum format -t template   # print Title of the script
+echo $OPTION                                                                        # print chosen option
 
-if [ "$OPTION" == "push" ]; then
-        echo -e "\npush function is under construction..."
+# functions (push, pull)
+if [ "$OPTION" == "push" ]; then                                                    
+        current_file=""                                                             # declare new variable (current file that is being read)
+        while IFS= read -r line; do
+                if [[ "$line" =~ ^-----\ Start\ of\ (.*)\ -----$ ]]; then
+                        current_file="${BASH_REMATCH[1]}" > "$current_file"
+                elif [[ "$line" =~ ^-----\ End\ of\ (.*)\ -----$ ]]; then
+                        current_file=""
+                elif [[ -n "$current_file" ]]; then
+                        echo "$line" >> "$current_file"
+                fi
+        done < "$CONF_DIRPATH"                                                      # giving input source (take configs from rehome config file)
+
 elif [ "$OPTION" == "pull" ]; then
-        echo -e "\npull function is under construction..."
-        > "$CONF_DIRPATH"   # empty the rehome config file 
+        > "$CONF_DIRPATH"                                                           # empty the rehome config file 
         for file in "${INPUT_FILES[@]}"; do
                 {
                         echo "----- Start of $file -----"
@@ -43,5 +53,5 @@ elif [ "$OPTION" == "pull" ]; then
         done
         
         echo "ReHome Configuration file was successfully generated"
-        wc -l "$CONF_DIRPATH"
+        wc -l "$CONF_DIRPATH"                                                       # print the number of lines that config contains to the screen
 fi
