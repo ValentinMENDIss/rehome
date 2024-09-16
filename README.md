@@ -1,42 +1,56 @@
 # ReHome - Home Manager for your Dotfiles (Inspired by NixOS)
 
-ReHome - is a shell script which can copy ("pull") and paste ("push") your config files/dotfiles from the system.
+ReHome - is a CLI-Tool written in rust and shell, which can copy ("pull") and paste ("push") your config files/dotfiles from the system.
 
 ### How does it work?
 
-ReHome shell script creates a new config file/text file where it can store every configuration file you want or need.
-This might be config files for basic applications like (btop, neofetch, etc...). But also this can be WM's config files.
+ReHome CLI-Tool creates a new config file/text file where it stores every configuration of specific files you want or need.
+This might be config files for basic applications like (btop, neofetch, etc...). But also this can be WM's (and packages that are needed for them) config files.
 Such as (bspwm, sxhkd, polybar, rofi, etc...).
 
 ### Status of the tool
 
 To get you know about the project, we will write the current status of the tool right here. Yeah right here :)
 
-**IN DEVELOPMENT (ALPHA-RELEASE)**
+**IN DEVELOPMENT (BETA-RELEASE)**
 
 # Basic Installation Guide
 
-To install this shell script you will need to install these package:
-**gum**
-Official github repository of gum: https://github.com/charmbracelet/gum
+### Make sure you have Rust installed
+To install this shell script you will need to install rust if you don't have it.
+After it everything is ready to work on any UNIX-like Operating System.
 
+To check if rust is installed on your system run:
 
-P.S: If we will see that using gum is not really needed and the difference between the regular shell script and shell script with the gum interfac
-is not huge for user-friendliness/use-easiness, we will stop using it.
+```sh
+rustc --version
+```
 
+if you no version of rustc is printed out, see original documentation on rust website to install it.
 
-Now just run the shell script.
+### Build and Run
+Now you are almost there. What you will need is only to build an application and run it on your system.
+
+To build an application go to the directory of rehome and run following:
+
+```sh
+cargo build
+```
+
+Now just run the application in the directory of rehome with:
+
+```sh
+cargo run
+```
+
+Now everythin should run and work properly :).
+If you have any problems that you encounter while installing, running or using rehome please submit it on Issues page.
 
 ## LICENSES
 
 ### Project's License
-These project (shell-script) is licensed under the GNU General Public License v 3.0
+These project is licensed under the GNU General Public License v 3.0
 (GPL-3.0)
-
-### Third-Party License
-
-This project (shell-script) uses the 'gum' interface for shell scripts (CLI-Tool), which is licensed under the MIT License.
-The 'gum' license text is included in the 'LICENSE.GUM' file.
 
 ### Important Information
 
