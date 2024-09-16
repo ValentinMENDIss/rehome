@@ -1,12 +1,9 @@
 #!/bin/sh
 
-# ReHome Shell Script ( using gum from: https://github.com/charmbracelet/gum)
+# ReHome Shell Script (pull)
 # Uploaded on Github: (ValentinMENDIss)
 
-# Testing-Rust Branch
-
 # Have Fun :)
-
 
 ##################
 
